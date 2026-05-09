@@ -1,0 +1,17 @@
+@import './../styles/vars.scss';
+
+@mixin flex($jc: flex-start, $ai: center, $fw: nowrap){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+}
+
+@mixin btn($p: 10px){
+    padding: $p;
+    border: 1px solid grey;
+    color: grey;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}

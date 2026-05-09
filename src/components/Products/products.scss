@@ -1,0 +1,134 @@
+@import './../../styles/mixins.scss';
+.products{
+    color: #41403E;
+    padding: 5%;
+
+    &__top{
+        @include flex(center, center, nowrap);        
+        gap: 5%;
+        flex-wrap: wrap;
+
+        &-title {
+            margin: 0;
+        }
+
+        &-filter{
+            display: flex;
+            gap: 10px;
+        }
+
+        &-btn{
+            @include btn(15px);
+        }
+
+        &-btn:hover {
+            background: #DEAD6F;
+            color: #363634;
+        }
+    }
+
+   
+    .search-active {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #908F8D;
+        
+        strong {
+            color: #DEAD6F;
+            font-weight: normal;
+        }
+        
+        .clear-search {
+            background: none;
+            border: none;
+            color: #908F8D;
+            cursor: pointer;
+            padding: 0 4px;
+            font-size: 16px;
+            
+            &:hover {
+                color: #DEAD6F;
+            }
+        }
+    }
+
+    &__catalog{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5%;
+        margin: 3% 5%;
+
+        &-card{
+            background-color: #EEEBE5;
+            border-radius: 25px;
+            padding: 1rem;
+             transition: all 0.3s ease;     
+    
+        &:hover {                        
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+            .card-img{
+                height: 50%;
+            }
+
+            .card-info{
+                @include flex(start, start, nowrap);
+                flex-direction: column;
+                gap: 15px;
+
+                .card-rating{
+                    @include flex(flex-start, center, nowrap);
+                }
+            }
+            .card-price {
+                color: #DEAD6F;
+            }
+        }
+    }
+
+   
+    .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        grid-column: 1 / -1;
+        
+        p {
+            margin-bottom: 20px;
+            color: #908F8D;
+            
+            strong {
+                color: #DEAD6F;
+                font-weight: normal;
+            }
+        }
+        
+        .clear-search-btn {
+            @include btn(15px);
+            
+            &:hover {
+                background: #DEAD6F;
+                color: #363634;
+            }
+        }
+    }
+}
+
+.btn-Add, .btn-like{
+    @include btn(20px);
+    margin-right: 10px;
+}
+
+.btn-Add:hover {
+    background: #DEAD6F;
+    color: #363634;
+}
+
+.btn-like:hover {
+    background: #DEAD6F;
+    color: #363634;
+}
+

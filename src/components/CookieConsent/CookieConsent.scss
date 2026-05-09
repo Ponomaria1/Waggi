@@ -1,0 +1,66 @@
+// src/components/CookieConsent/cookieConsent.scss
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    
+    @media (min-width: 768px) {
+        left: auto;
+        right: 20px;
+        max-width: 400px;
+    }
+    
+    &__content {
+        background: #41403E;
+        color: #EDEDED;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-left: 4px solid #DEAD6F;
+    }
+    
+    &__text {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        margin: 0 0 15px 0;
+    }
+    
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+    
+    &__accept {
+        background: #DEAD6F;
+        color: #41403E;
+        border: none;
+        padding: 6px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        
+        &:hover {
+            background: #c49a5c;
+        }
+    }
+    
+    &__decline {
+        background: transparent;
+        color: #EDEDED;
+        border: 1px solid #908F8D;
+        padding: 6px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 13px;
+        
+        &:hover {
+            background: #908F8D;
+            color: #41403E;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import './../../styles/mixins.scss';
+
+.header {
+color: #41403E;
+    &__top {
+        @include flex(space-between, center, nowrap);
+        gap: 10%;
+        flex-direction: row;
+        padding: 1% 20%;
+
+        &-search {
+            flex: 1;
+    max-width: 400px;
+    
+    .search-form {
+        position: relative;
+        width: 100%;
+        
+        input[type="search"] {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border-radius: 40px;
+            border: 1px solid #E8E4DD;
+            background-color: #FFFFFF;
+            font-family: "Chilanka", cursive;
+            font-size: 14px;
+            color: #41403E;
+            transition: all 0.3s ease;
+            
+            &::placeholder {
+                color: #B8B6B0;
+                font-size: 13px;
+            }
+            
+            &:focus {
+                outline: none;
+                border-color: #DEAD6F;
+                box-shadow: 0 0 0 3px rgba(222, 173, 111, 0.15);
+            }
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #DEAD6F;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: #C4904F;
+            }
+        }
+    }
+        }
+
+        &-contacts {
+            @include flex(end, end, nowrap);
+            flex-direction: column;
+        }
+    }
+
+    &__bottom {
+        @include flex(end, center, nowrap);
+        padding: 1% 20%;
+        flex-direction: row;
+        gap: 20%;
+        
+        border-bottom: #EDEDED 1px solid;
+        border-top: #EDEDED 1px solid;
+
+        &-nav {
+            @include flex(center, center, nowrap);
+            gap: 4rem;
+
+            &__link {
+                text-decoration: none !important;
+                color: #41403E;
+            }
+
+        }
+
+        &-icons {
+            @include flex(center, center, nowrap);
+            gap: 40%;
+        }
+    }
+}
+
+.contacts-title {
+    color: #908F8D;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.contacts-text {
+    
+    font-weight: 250;
+    font-size: 20px;
+}
+
+.cart__wrapper {
+    position: relative;
+
+    &-count {
+         position: absolute;
+          line-height: 0;
+    font-family: Arial, sans-serif;
+    top: -8px;
+    right: -12px;
+    background: #DEAD6F;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EDEDED;
+    font-size: 10px;
+    outline: 3px solid #fff;
+    box-sizing: border-box;
+    }
+}

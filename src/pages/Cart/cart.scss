@@ -1,0 +1,175 @@
+@import './../../styles/mixins.scss';
+
+.cart {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        gap: 30%;
+        margin: 2vh auto;
+        padding: 1% 3%;
+        background-color: #F7EEE4;
+
+        &-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #41403E;
+        }
+
+        &-delete {
+            display: flex;
+            gap: 16px;
+
+            &-selected,
+            &-all {
+                padding: 8px 16px;
+                font-size: 14px;
+                font-weight: 500;
+                border: 1px solid #41403E;
+                border-radius: 3px;  
+                cursor: pointer;
+                background-color: transparent;
+                color: #41403E;
+              
+
+                &:hover {
+                    background-color: #DEAD6F;
+                    color: #41403E;
+                    
+                }
+            }
+        }
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 16px;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+
+        background: white;
+       
+        padding: 20px;
+        border-radius: 10px;
+        color: #41403E;
+        position: relative;
+
+
+            input[type="checkbox"] {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 24px;
+        height: 24px;
+        z-index: 10;
+        cursor: pointer;
+        accent-color: #DEAD6F;  
+         
+        background-color: white;
+        border-radius: 6px; }
+        
+        img {
+            width: 100%;
+            height: 250px;
+            background: #EEEBE5;           
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .card-info {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;  // добавь, чтобы занимало всю ширину
+    
+    h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .card-rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+    
+    .card-price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #DEAD6F;
+        
+    }
+    
+    .card-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        
+        
+    }
+}
+    }
+    
+  &__total {
+    
+    max-width: 800px;
+    margin: 20px auto 40px;
+    padding: 0px 24px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #F7EEE4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    .wrapper-label {
+        font-weight: normal;
+        font-size: 30px;
+        color: #41403E;
+    }
+    
+    .wrapper-currency,
+    .wrapper-price {
+        color: #DEAD6F;  // $ и число оранжевые
+    }
+
+    .total-button {
+         margin-top: 2rem;
+        margin-bottom: 2rem;
+       
+        padding: 10px 28px;
+        border: 1px solid #41403E;
+        background-color: transparent;
+        color: #41403E;
+        text-decoration: none;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .total-button:hover {
+        background-color: #DEAD6F;
+    }
+
+    }
+     .empty-fav {
+        max-width:100%;
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+// .App{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+// }
+
+body {
+  font-family: "Chilanka", cursive;
+  
+
+}
+
+.text_accent {
+  color: #DEAD6F;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 720px) {
+  
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }}
